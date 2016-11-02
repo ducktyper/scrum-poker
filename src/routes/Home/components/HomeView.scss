@@ -1,5 +1,26 @@
-.duck {
-  display: block;
-  width: 120px;
-  margin: 1.5rem auto;
+$select-box-background: #1956A5;
+$choice-background: #1C62BF;
+$choice-text: #FFFFFF;
+$choice-border: #FFFFFF;
+
+#select-box {
+  background-color: $select-box-background;
+  border-radius: 5px;
+  padding: 1em;
+  .choice  {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 1em;
+    display: inline-block;
+    &> div {
+      border-radius: 5px;
+      border: 2px solid $choice-border;
+      background-color: $choice-background;
+      color: $choice-text;
+      font-size: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      cursor: pointer;
+    }
+  }
 }
