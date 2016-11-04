@@ -2,7 +2,7 @@ import React from 'react'
 import './fibanacci.scss'
 
 export const Fibanacci = (props) => {
-  if (props.choice === '') {
+  if (props.view === 'select-box') {
     return (
       <div id='select-box'>
         <div className='choice' onClick={() => props.select("0")}><div>0</div></div>
@@ -22,18 +22,31 @@ export const Fibanacci = (props) => {
         <div className='choice' onClick={() => props.select("☕")}><div>☕</div></div>
       </div>
     );
-  } else {
+  } else if (props.view === 'ready-to-reveal') {
     return (
-      <div id='reveal-card' onClick={() => props.select("")}>
+      <div id='ready-to-reveal' onClick={props.reveal}>
+        <div>Ready</div>
+      </div>
+    );
+  } else if (props.view === 'reveal-card') {
+    return (
+      <div id='reveal-card' onClick={props.clear}>
         <div>{props.choice}</div>
       </div>
+    );
+  } else {
+    return (
+      <div>No view</div>
     );
   }
 }
 
 Fibanacci.propTypes = {
   choice : React.PropTypes.string.isRequired,
-  select : React.PropTypes.func.isRequired
+  view   : React.PropTypes.string.isRequired,
+  select : React.PropTypes.func.isRequired,
+  reveal : React.PropTypes.func.isRequired,
+  clear  : React.PropTypes.func.isRequired
 }
 
 export default Fibanacci

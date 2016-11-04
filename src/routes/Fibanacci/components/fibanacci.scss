@@ -25,6 +25,17 @@ $choice-border: #FFFFFF;
   }
 }
 
+#ready-to-reveal {
+  background-color: $select-box-background;
+  cursor: pointer;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  &> div {
+    font-size: 250px;
+    color: $choice-text;
+  }
+}
+
 #reveal-card {
   background-color: $select-box-background;
   cursor: pointer;
