@@ -1,6 +1,14 @@
-import DeckView from './components/DeckView'
+import { injectReducer } from '../../store/reducers'
 
-// Sync route definition
-export default {
-  component : DeckView
-}
+export default (store) => ({
+  path : '',
+  getComponent (nextState, cb) {
+    require.ensure([], (require) => {
+      const Fibanacci = require('./containers/FibanacciContainer').default
+      const reducer = require('./modules/fibanacci').default
+
+      injectReducer(store, { key: 'fibanacci', reducer })
+      cb(null, Fibanacci)
+    }, 'fibanacci')
+  }
+})
