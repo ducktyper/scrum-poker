@@ -1,7 +1,7 @@
 import React from 'react'
-import './HomeView.scss'
+import './DeckView.scss'
 
-export const HomeView = () => (
+export const DeckView = () => (
   <div id='select-box'>
     <div className='choice'><div>0</div></div>
     <div className='choice'><div>1</div></div>
@@ -21,4 +21,4 @@ export const HomeView = () => (
   </div>
 )
 
-export default HomeView
+export default DeckView

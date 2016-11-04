@@ -6,7 +6,7 @@ export const Header = () => (
   <div>
     <h1>React Redux Starter Kit</h1>
     <IndexLink to='/' activeClassName='route--active'>
-      Home
+      Fibanacci
     </IndexLink>
     {' · '}
     <Link to='/counter' activeClassName='route--active'>
