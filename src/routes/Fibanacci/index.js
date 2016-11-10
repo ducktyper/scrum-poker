@@ -1,7 +1,7 @@
 import { injectReducer } from '../../store/reducers'
 
 export default (store) => ({
-  path : '',
+  path : 'fibanacci',
   getComponent (nextState, cb) {
     require.ensure([], (require) => {
       const Fibanacci = require('./containers/FibanacciContainer').default

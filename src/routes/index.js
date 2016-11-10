@@ -10,10 +10,10 @@ import CounterRoute from './Counter'
 export const createRoutes = (store) => ({
   path        : '/',
   component   : CoreLayout,
-  indexRoute  : FibanacciRoute(store),
+  indexRoute  : StandardRoute(store),
   childRoutes : [
     CounterRoute(store),
-    StandardRoute(store)
+    FibanacciRoute(store)
   ]
 })
 

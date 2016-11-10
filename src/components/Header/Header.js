@@ -5,11 +5,11 @@ import './Header.scss'
 export const Header = () => (
   <div>
     <h1>React Redux Starter Kit</h1>
-    <IndexLink to='/standard' activeClassName='route--active'>
+    <IndexLink to='/' activeClassName='route--active'>
       Standard
     </IndexLink>
     {' · '}
-    <IndexLink to='/' activeClassName='route--active'>
+    <IndexLink to='/fibanacci' activeClassName='route--active'>
       Fibanacci
     </IndexLink>
     {' · '}
