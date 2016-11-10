@@ -1,0 +1,48 @@
+$select-box-background: #1956A5;
+$choice-background: #1C62BF;
+$choice-text: #FFFFFF;
+$choice-border: #FFFFFF;
+
+#select-box {
+  background-color: $select-box-background;
+  border-radius: 5px;
+  padding: 1em;
+  .choice  {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 1em;
+    display: inline-block;
+    &> div {
+      border-radius: 5px;
+      border: 2px solid $choice-border;
+      background-color: $choice-background;
+      color: $choice-text;
+      font-size: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      cursor: pointer;
+    }
+  }
+}
+
+#ready-to-reveal {
+  background-color: $select-box-background;
+  cursor: pointer;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  &> div {
+    font-size: 100px;
+    color: $choice-text;
+  }
+}
+
+#reveal-card {
+  background-color: $select-box-background;
+  cursor: pointer;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  &> div {
+    font-size: 250px;
+    color: $choice-text;
+  }
+}

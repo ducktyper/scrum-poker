@@ -1,5 +1,6 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/CoreLayout/CoreLayout'
+import StandardRoute from './Standard'
 import FibanacciRoute from './Fibanacci'
 import CounterRoute from './Counter'
 
@@ -11,7 +12,8 @@ export const createRoutes = (store) => ({
   component   : CoreLayout,
   indexRoute  : FibanacciRoute(store),
   childRoutes : [
-    CounterRoute(store)
+    CounterRoute(store),
+    StandardRoute(store)
   ]
 })
 
