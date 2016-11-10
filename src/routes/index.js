@@ -2,7 +2,6 @@
 import CoreLayout from '../layouts/CoreLayout/CoreLayout'
 import StandardRoute from './Standard'
 import FibanacciRoute from './Fibanacci'
-import CounterRoute from './Counter'
 
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
@@ -12,7 +11,6 @@ export const createRoutes = (store) => ({
   component   : CoreLayout,
   indexRoute  : StandardRoute(store),
   childRoutes : [
-    CounterRoute(store),
     FibanacciRoute(store)
   ]
 })

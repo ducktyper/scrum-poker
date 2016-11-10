@@ -12,10 +12,6 @@ export const Header = () => (
     <IndexLink to='/fibanacci' activeClassName='route--active'>
       Fibanacci
     </IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName='route--active'>
-      Counter
-    </Link>
   </div>
 )
 
