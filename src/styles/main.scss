@@ -3,14 +3,33 @@ $choice-background: #1C62BF;
 $choice-text: #FFFFFF;
 $choice-border: #FFFFFF;
 
-#select-box {
+body {
   background-color: $select-box-background;
-  border-radius: 5px;
-  padding: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#header {
+  padding: .5em;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+    &.route--active {
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+#select-box {
+  padding: 0 .3em;
   .choice  {
     box-sizing: border-box;
     width: 33.333%;
-    padding: 1em;
+    padding: .6em;
     display: inline-block;
     &> div {
       border-radius: 5px;
@@ -18,8 +37,7 @@ $choice-border: #FFFFFF;
       background-color: $choice-background;
       color: $choice-text;
       font-size: 2em;
-      padding-top: 1em;
-      padding-bottom: 1em;
+      padding: .3em 0;
       cursor: pointer;
     }
   }
@@ -28,21 +46,17 @@ $choice-border: #FFFFFF;
 #ready-to-reveal {
   background-color: $select-box-background;
   cursor: pointer;
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-  &> div {
-    font-size: 100px;
-    color: $choice-text;
-  }
+  padding: 120px 0;
+  font-size: 100px;
+  color: $choice-text;
 }
 
 #reveal-card {
   background-color: $select-box-background;
   cursor: pointer;
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-  &> div {
-    font-size: 250px;
-    color: $choice-text;
-  }
+  color: $choice-text;
+  &.size-1 { padding: 30px 0; font-size: 280px; }
+  &.size-2 { padding: 60px 0; font-size: 200px; }
+  &.size-3 { padding: 90px 0; font-size: 150px; }
+  &.size-emoji { padding: 80px 0; font-size: 150px; }
 }

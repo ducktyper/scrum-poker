@@ -1,6 +1,11 @@
 import React from 'react'
 
 export const Standard = (props) => {
+  let displayClass = (choice) => {
+    if (choice === "☕") return 'size-emoji';
+    return `size-${choice.length}`;
+  }
+
   if (props.view === 'select-box') {
     return (
       <div id='select-box'>
@@ -24,13 +29,13 @@ export const Standard = (props) => {
   } else if (props.view === 'ready-to-reveal') {
     return (
       <div id='ready-to-reveal' onClick={props.reveal}>
-        <div>Ready</div>
+        Ready
       </div>
     );
   } else if (props.view === 'reveal-card') {
     return (
-      <div id='reveal-card' onClick={props.clear}>
-        <div>{props.choice}</div>
+      <div id='reveal-card' onClick={props.clear} className={displayClass(props.choice)}>
+        {props.choice}
       </div>
     );
   } else {
