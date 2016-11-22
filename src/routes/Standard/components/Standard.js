@@ -1,5 +1,4 @@
 import React from 'react'
-import './Standard.scss'
 
 export const Standard = (props) => {
   if (props.view === 'select-box') {

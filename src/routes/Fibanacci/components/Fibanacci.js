@@ -1,5 +1,4 @@
 import React from 'react'
-import './Fibanacci.scss'
 
 export const Fibanacci = (props) => {
   if (props.view === 'select-box') {
