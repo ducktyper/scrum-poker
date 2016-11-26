@@ -25,6 +25,7 @@ sudo mkdir /var/www/scrum-poker
 sudo chown [username] /var/www/scrum-poker
 sudo service nginx start
 
-## Deploy from the app
-cd release && tar cf - ./ | ssh [username]@ducktyper.co.nz "tar xf - -C /var/www/scrum-poker" --exclude=*.DS_Store
+## Build and deploy
+npm deploy:prod
+cd dist && tar cf - ./ | ssh [username]@ducktyper.co.nz "tar xf - -C /var/www/scrum-poker" --exclude=*.DS_Store
 
