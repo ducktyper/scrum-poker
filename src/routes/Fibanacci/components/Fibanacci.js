@@ -1,6 +1,9 @@
 import React from 'react'
+import Shake from '../../../lib/shake'
 
 export const Fibanacci = (props) => {
+  Shake.disable()
+
   let displayClass = (choice) => {
     if (choice === '☕') return 'size-emoji'
     return `size-${choice.length}`
@@ -27,6 +30,7 @@ export const Fibanacci = (props) => {
       </div>
     )
   } else if (props.view === 'ready-to-reveal') {
+    Shake.enable(props.reveal)
     return (
       <div id='ready-to-reveal' onClick={props.reveal}>
         Ready
