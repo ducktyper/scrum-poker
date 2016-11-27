@@ -26,6 +26,6 @@ sudo chown [username] /var/www/scrum-poker
 sudo service nginx start
 
 ## Build and deploy
-npm deploy:prod
+npm run deploy:prod
 cd dist && tar cf - ./ | ssh [username]@ducktyper.co.nz "tar xf - -C /var/www/scrum-poker" --exclude=*.DS_Store
 
