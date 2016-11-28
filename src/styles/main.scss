@@ -39,6 +39,10 @@ body {
       font-size: 2em;
       padding: .3em 0;
       cursor: pointer;
+      &.coffee {
+        background: $choice-background url('images/coffee.png') no-repeat center center;
+        background-size: 25px 25px;
+      }
     }
   }
 }
@@ -59,4 +63,11 @@ body {
   &.size-2 { padding: 60px 0; font-size: 200px; }
   &.size-3 { padding: 90px 0; font-size: 150px; }
   &.size-emoji { padding: 80px 0; font-size: 150px; }
+  &.size-coffee {
+    padding: 80px 0;
+    margin: 0 auto;
+    height: 350px;
+    background: url('images/coffee.png') no-repeat center center;
+    background-size: 200px 200px;
+  }
 }

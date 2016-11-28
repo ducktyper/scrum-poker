@@ -5,8 +5,13 @@ export const Standard = (props) => {
   Shake.disable()
 
   let displayClass = (choice) => {
-    if (choice === '☕') return 'size-emoji'
+    if (choice === 'coffee') return 'size-coffee'
     return `size-${choice.length}`
+  }
+
+  let displayText = (choice) => {
+    if (choice === 'coffee') return ''
+    return choice
   }
 
   if (props.view === 'select-box') {
@@ -26,7 +31,7 @@ export const Standard = (props) => {
         <div className='choice' onClick={() => props.select('100')}><div>100</div></div>
         <div className='choice' onClick={() => props.select('?')}><div>?</div></div>
         <div className='choice' onClick={() => props.select('∞')}><div>∞</div></div>
-        <div className='choice' onClick={() => props.select('☕')}><div>☕</div></div>
+        <div className='choice' onClick={() => props.select('coffee')}><div className='coffee'>&nbsp;</div></div>
       </div>
     )
   } else if (props.view === 'ready-to-reveal') {
@@ -39,7 +44,7 @@ export const Standard = (props) => {
   } else if (props.view === 'reveal-card') {
     return (
       <div id='reveal-card' onClick={props.clear} className={displayClass(props.choice)}>
-        {props.choice}
+        {displayText(props.choice)}
       </div>
     )
   } else {
