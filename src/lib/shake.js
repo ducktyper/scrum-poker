@@ -18,6 +18,9 @@ export const Shake = {
     loop = setInterval(() => {
       var change = Math.abs(current - prev)
       if (prev !== 0 && change > sensitivity) {
+        if ("vibrate" in navigator) {
+          navigator.vibrate(200);
+        }
         action()
       }
       prev = current
